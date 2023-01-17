@@ -1,0 +1,15 @@
+// C program to find maximum between three numbers using conditional operator AND Ternary Operator.
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    printf("Enter first number:\n");
+    scanf("%d", &a);
+    printf("Enter second number:\n");
+    scanf("%d", &b);
+    int max;
+    max=(a>b)?a:b;
+    printf("Maximun number is %d",max);
+
+    return 0;
+}

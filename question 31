@@ -1,0 +1,23 @@
+// C program to find sum of all elements of array
+#include <stdio.h>
+int main()
+{
+    int size;
+    float sum=0;
+    printf("Enter the size of an array:\n");
+    scanf("%d", &size);
+    int arr[size];
+    printf("Enter elements of array\n");
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("Entered Array is:-\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d,",arr[i]);
+        sum+=arr[i];
+    }
+    printf("\nThe sum of given array is %f\n",sum);
+    return 0;
+}

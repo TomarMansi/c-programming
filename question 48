@@ -1,0 +1,11 @@
+// C program to add two number using pointers.
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter two number:\n");
+    scanf("%d %d",&a,&b);
+    int *p=&a,*p1=&b;
+    printf("Sum of value is %d",(*p+*p1));
+    return 0;
+}

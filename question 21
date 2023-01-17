@@ -1,0 +1,22 @@
+// C program to count frequency of digits in a given number
+#include<stdio.h>
+int main()
+{
+    int n,num;
+    printf("Enter any number:\n");
+    scanf("%d",&n);
+    printf("Enter number for which you want to count frequency:\n");
+    scanf("%d",&num);
+    int rem ,count=0,temp=n;
+    while (n>0)
+    {
+        rem=n%10;
+        if (rem==num)
+        {
+            count++;
+        }
+        n=n/10;
+    }
+    printf("%d occurs %d times ",num,count);
+    return 0;
+}

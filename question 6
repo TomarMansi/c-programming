@@ -1,0 +1,36 @@
+// C program to calculate total, average and percentage and grades of five subjects
+#include <stdio.h>
+int main()
+{
+    float a, b, c, d, e;
+    printf("Enter marks of first subject:");
+    scanf("%f", &a);
+    printf("\nEnter marks of second subject:");
+    scanf("%f", &b);
+    printf("\nEnter marks of third subject:");
+    scanf("%f", &c);
+    printf("\nEnter marks of fourth subject:");
+    scanf("%f", &d);
+    printf("\nEnter marks of fifth subject:");
+    scanf("%f", &e);
+    float total=(a+b+c+d+e);
+    float avg=(a+b+c+d+e)/5;
+    
+    if (avg>=80 && avg<=100)
+    {
+        printf(" Grade:'A'\n");
+    }else if (avg<80 && avg>=60)
+    {
+        printf(" Grade:'B'\n");
+    }
+    else if (avg<60 && avg>=40)
+    {
+        printf(" Grade:'C'\n");
+    }
+    else if (avg<40 && avg>=40)
+    {
+        printf(" Grade:'D'\n");
+    }
+    printf("\nTotal marks is %.2f\n average marks is %.2f\n percentage scored is %.2f %% \n", total, total/ 5, total / 5);
+    return 0;
+}

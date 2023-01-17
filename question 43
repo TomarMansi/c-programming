@@ -1,0 +1,35 @@
+// All Operations of String.
+#include<stdio.h>
+#include <string.h>
+int main()
+{
+    char str1[100],str2[100];
+    printf("Enter the string 1:\n");
+    gets(str1);
+    printf("Entered string 1 is:\n");
+    puts(str1);
+    printf("Enter the string 2:\n");
+    gets(str2);
+    printf("Entered string is 2:\n");
+    puts(str2);
+    char str3[200];
+
+    // Concatenate two strings
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1);
+
+    // Copy one string to another
+    strcpy(str3, str2);
+    printf("Copied string : %s\n", str3);
+
+    // Length of a string
+    printf("Length of str1: %d\n", strlen(str1));
+
+    // Compare two strings
+    if (strcmp(str1, str2) == 0) {
+        printf("str1 and str3 are equal\n");
+    } else {
+        printf("str1 and str3 are not equal\n");
+    }
+    return 0;
+}

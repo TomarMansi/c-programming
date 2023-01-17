@@ -1,0 +1,31 @@
+// C program to check positive negative or zero using switch case.
+#include <stdio.h>
+
+int main()
+{
+    int num;
+
+    printf("Enter any number: ");
+    scanf("%d", &num);
+
+    switch (num > 0)
+    {
+    case 1:
+        printf("Given number is positive.");
+        break;
+
+    case 0:
+        switch (num < 0)
+        {
+        case 1:
+            printf("Given number is negative.");
+            break;
+        case 0:
+            printf("Given number is zero.");
+            break;
+        }
+        break;
+    }
+
+    return 0;
+}

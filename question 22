@@ -1,0 +1,28 @@
+// C program to find HCF(GCD) AND LCM of two numbers.
+#include <stdio.h>
+int main()
+{
+    int a, b;
+    printf("Enter first number:\n");
+    scanf("%d", &a);
+    printf("Enter second number:\n");
+    scanf("%d", &b);
+    int max, hcf;
+    max = (a > b) ? a : b;
+    while (1)
+    {
+        if ((max % a == 0) && (max % b == 0))
+        {
+            printf("The LCM of %d and %d is %d ", a, b, max);
+            break;
+        }
+        max++;
+    }
+    for (int i = 1; i <= a || i <= b; i++)
+    {
+        if (a % i == 0 && b % i == 0)
+        hcf = i;
+    }
+    printf("\nHCF = %d", hcf);
+    return 0;
+}

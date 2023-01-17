@@ -1,0 +1,33 @@
+// C program to print all Strong Numbers between 1 to n
+#include <stdio.h>
+int main()
+{
+    int n;
+    printf("Enter number till where you want to print:\n");
+    scanf("%d", &n);
+    int rem;
+    for (int i = 1; i <= n; i++)
+    {
+        int sum = 0;
+        int temp = i;
+
+        while (temp > 0)
+        {
+            int fact = 1;
+            rem = temp % 10;
+            for (int j = 1; j <= rem; j++)
+            {
+                fact = fact * j;
+            }
+            sum = sum + fact;
+            temp = temp / 10;
+        }
+        printf("The strong number in given range are given below:-\n");
+        if (sum == i)
+        {
+            printf("%d\n", sum);
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,20 @@
+// C program to count frequency of each character in a string.
+#include<stdio.h>
+int main(){
+	char str[100];
+	printf("Enter the string:-\n");
+	gets(str);
+	for(int i=0; str[i]!='\0';i++)
+	{
+	    int count=1;
+		for(int j=i+1 ;str[j]!='\0';j++ )
+		{
+			if(str[i]==str[j])
+			count++;
+		}
+		printf("%c occurs %d time in the string\n",str[i],count);
+	}
+
+	return 0;
+
+}

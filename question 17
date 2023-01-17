@@ -1,0 +1,19 @@
+// C program to print all even numbers AND sum of it from 1 to n
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter any number:\n");
+    scanf("%d",&n);
+    printf("Even numbers till %d are\n",n);
+    int sum=0;
+    for (int i = 1; i <= n; i++)
+    {
+        if (i%2!=0)
+        {
+        printf("%d\n",i);
+        sum+=i;
+        }
+    }
+    printf("Sum of even number is %d",sum);
+}

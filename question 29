@@ -1,0 +1,15 @@
+// C program to print ASCII values of all characters
+#include<stdio.h>
+int main()
+{
+    for (char i = 'a'; i <='z'; i++)
+    {
+        printf("ASCII value of %c is %d\n",i,i);
+    }
+    for (char i = 'A'; i <='Z'; i++)
+    {
+        printf("ASCII value of %c is %d\n",i,i);
+    }
+    
+    return 0;
+}

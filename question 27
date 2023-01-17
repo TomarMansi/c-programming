@@ -1,0 +1,47 @@
+// C program to print all Perfect numbers between 1 to n AND Check a given number is Perfect numbers or not.
+#include<stdio.h>
+int main()
+{
+    int n;
+    int flag;
+    printf("Enter the last number:\n");
+    scanf("%d",&n);
+    for (int i = 1; i <= n; i++)
+    {
+        flag=1;
+        for (int j = 2; j < i/2; j++)
+        {
+            if (i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if (flag==1)
+        {
+            printf("%d,",i);
+        }
+    }
+    int _n;
+    int _flag=1;
+    printf("\nEnter any number:\n");
+    scanf("%d",&_n);
+    for (int i = 2; i < n/2; i++)
+    {
+        if (_n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+        if (_flag==1)
+        {
+           printf("\n%d is a prime number",_n);
+        }
+        else
+           printf("\n%d is not a prime number",_n);
+        
+    
+    
+    return 0;
+}

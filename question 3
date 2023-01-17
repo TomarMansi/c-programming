@@ -1,0 +1,13 @@
+// C program to find all angles of a triangle if two angles are given.
+#include<stdio.h>
+int main()
+{
+    float a,b;
+    printf("Enter first angle:");
+    scanf("%f",&a);
+    printf("Enter second angle:");
+    scanf("%f",&b);
+    float third_angle=180-(a+b);
+    printf("The third angle is %.2f\n",third_angle);
+    return 0;
+}

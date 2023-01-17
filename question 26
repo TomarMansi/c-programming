@@ -1,0 +1,56 @@
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int num, i, temp, _temp, rem, n = 0, sum = 0;
+
+    printf("Enter the number:\n ");
+    scanf("%d",&num);
+    for(i =  1; i < num; ++i)
+    {
+        _temp = i;
+        temp = i;
+        while (temp != 0)
+        {
+            temp /= 10;
+            ++n;
+        }
+        while (_temp != 0)
+        {
+            rem = _temp % 10;
+            sum += pow(rem, n);
+            _temp /= 10;
+        }
+        if (sum == i) {
+            printf("%d ", i);
+        }
+        n = 0;
+        sum = 0;
+
+    }
+     int _num,temp2;
+
+    printf("Enter any number:\n ");
+    scanf("%d",&_num);
+    int temp1=temp2=_num,__count=0;
+    while (temp1>0)
+    {
+        int _remainder=temp1%10;
+        __count++;
+        temp1=temp1/10;
+    }
+    while (temp2>0)
+    {
+        int remm=temp2%10;
+        sum+=pow(remm,__count);
+        temp2=temp2/10;
+    }
+    if (sum==_num)
+    {
+        printf("%d is a Armstrong number",sum);
+    }
+    else
+        printf("%d is a Armstrong number",sum);
+    return 0;
+}

@@ -1,0 +1,69 @@
+// C program to merge two sorted array in ascending order.
+#include <stdio.h>
+int main()
+{
+    int size1, size2;
+    printf("\nEnter the size of array 1:\n");
+    scanf("%d", &size1);
+    printf("\nEnter the size of array 2:\n");
+    scanf("%d", &size2);
+    int arr1[size1], arr2[size2];
+    printf("\nEnter the elements of array 1:-\n");
+    for (int i = 0; i < size1; i++)
+    {
+        scanf("%d", &arr1[i]);
+    }
+    printf("\nEnter the elements of array 2:-\n");
+    for (int i = 0; i < size2; i++)
+    {
+        scanf("%d", &arr2[i]);
+    }
+    printf("\nThe elements of array 1 are:-\n");
+    for (int i = 0; i < size1; i++)
+    {
+        printf("%d\t", arr1[i]);
+    }
+    printf("\nThe elements of array 2 are:-\n");
+    for (int i = 0; i < size2; i++)
+    {
+        printf("%d\t", arr2[i]);
+    }
+    int mergearr[size1 + size2], k = 0, l;
+    for (int i = 0; i < size1; i++)
+    {
+        mergearr[k] = arr1[i];
+        k++;
+    }
+    l = k;
+    for (int i = 0; i < size2; i++)
+    {
+        mergearr[l] = arr2[i];
+        l++;
+    }
+    printf("\nAfter merging Array without sorting:-\n");
+    for (int i = 0; i < (size1 + size2); i++)
+    {
+        printf("%d\t", mergearr[i]);
+    }
+    int temp;
+    for (int i = 1; i < (size1 + size2); i++)
+    {
+        for (int j = 0; j < ((size1 + size2) - i); j++)
+        {
+            if (mergearr[j] > mergearr[j + 1])
+            {
+                int temp;
+                temp = mergearr[j];
+                mergearr[j] = mergearr[j + 1];
+                mergearr[j + 1] = temp;
+            }
+        }
+    }
+    printf("\nAfter merging Array with sorting:-\n");
+    for (int i = 0; i < (size1 + size2); i++)
+    {
+        printf("%d\t", mergearr[i]);
+    }
+
+    return 0;
+}

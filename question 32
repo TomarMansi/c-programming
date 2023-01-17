@@ -1,0 +1,49 @@
+// C program to copy one array to another array.
+#include <stdio.h>
+int main()
+{
+    int size,_size, count=0, _count=0;
+    printf("\nEnter the size of first array:\n");
+    scanf("%d", &size);
+    int arr[size];
+    printf("\nEnter elements of first array\n");
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    printf("\nEntered elements of first array:-\n");
+    for (int i = 0; i < size; i++)
+    {
+        printf("%d,", arr[i]);
+    }
+    printf("\nEnter the size of second array:\n");
+    scanf("%d", &_size);
+    int _arr[_size];
+    printf("\nEnter elements of second array\n");
+    for (int i = 0; i < _size; i++)
+    {
+        scanf("%d", &_arr[i]);
+    }
+    printf("\nEntered elements of second array:-\n");
+    for (int i = 0; i < _size; i++)
+    {
+        printf("%d,", _arr[i]);
+    }
+    int newarr[size+_size],k=0,l=0;
+    for (int i = 0; i < size; i++)
+    {
+        newarr[k]=arr[i];
+        k++;
+    }
+    for (int i = 0; i < _size; i++)
+    {
+        newarr[k+l]=_arr[i];
+        l++;
+    }
+    for (int i = 0; i < size+_size-2; i++)
+    {
+        printf("%d,",newarr[i]);
+    }
+    
+    return 0;
+}

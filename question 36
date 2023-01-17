@@ -1,0 +1,37 @@
+// C program to find second largest number and Sorting Using Bubble sort in an array.
+#include <stdio.h>
+int main()
+{
+    int size;
+    printf("Enter the size of an array:\n");
+    scanf("%d", &size);
+    int arr[size];
+    printf("Enter the elements of an array:-\n");
+    for (int i = 0; i < size; i++)
+    {
+        scanf("%d", &arr[i]);
+    }
+    int largest1 = arr[0], largest2 = arr[1];
+    if (largest1 < largest2)
+    {
+        int temp = largest1;
+        largest1 = largest2;
+        largest2 = temp;
+    }
+    for (int i = 0; i < size; i++)
+    {
+
+        if (arr[i] > largest1)
+        {
+            largest2 = largest1;
+            largest1 = arr[i];
+        }
+        else if ((arr[i] > largest2) && (arr[i] != largest1))
+        {
+            largest2 = arr[i];
+        }
+    }
+    printf("The FIRST LARGEST = %d\n", largest1);
+    printf("THE SECOND LARGEST = %d\n", largest2);
+    return 0;
+}

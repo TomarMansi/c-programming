@@ -1,0 +1,19 @@
+// C program to find power and square root of any number
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int a,b;
+    printf("Enter first number:\n");
+    scanf("%d", &a);
+    printf("Enter second number:\n");
+    scanf("%d", &b);
+    int _pow=pow(a,b);
+    float sqrta=sqrt(a);
+    float sqrtb=sqrt(b);
+    printf("%d to the power %d is %d\n",a,b,_pow);
+    printf("Square root of %d is %f\n",a,sqrta);
+    printf("Square root of %d is %f\n",b,sqrtb);
+
+    return 0;
+}

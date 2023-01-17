@@ -1,0 +1,30 @@
+// Hollow Square Star Pattern
+// *****
+// ** **
+// * * *
+// ** **
+// *****
+#include <stdio.h>
+int main()
+{
+    int num = 5;
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < num; j++)
+        {
+            if (i == 0 || i == 4 || j == 0 || j == 4)
+            {
+                printf("*");
+            }
+            else if ((i==j)||(j==(4-i)))
+            {
+                printf("*");
+            }
+            else
+                printf(" ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

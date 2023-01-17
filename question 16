@@ -1,0 +1,16 @@
+// C program to print all natural numbers AND sum of it from 1 to n.
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter any number:\n");
+    scanf("%d",&n);
+    printf("Natural numbers till %d are\n",n);
+    int sum=0;
+    for (int i = 1; i <= n; i++)
+    {
+        printf("%d\n",i);
+        sum+=i;
+    }
+    printf("Sum is %d",sum);
+}

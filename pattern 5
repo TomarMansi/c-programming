@@ -1,0 +1,33 @@
+/ Rhombus Star Pattern
+#include <stdio.h>
+int main()
+{
+    int num = 5;
+    for (int i = 0; i < num; i++)
+    {
+        for (int j = 0; j < ((2 * num) - 1); j++)
+        {
+            if (i == 0 || i == 4)
+            {
+                if ((j >= (num - 1 - i)) && j < ((2 * num - 1) - i))
+                {
+                    printf("*");
+                }
+                else
+                    printf(" ");
+            }
+            else if ((i > 0) && (i < num))
+            {
+                if ((j == (num - 1 - i) || j == ((2 * num) - 2) - i))
+                {
+                    printf("*");
+                }
+                else
+                    printf(" ");
+            }
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

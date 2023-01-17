@@ -1,0 +1,12 @@
+// C program to calculate total electricity bill
+#include <stdio.h>
+int main()
+{
+    int unit;
+    printf("Enter total unit consumed:\n");
+    scanf("%d", &unit);
+    //Let rate of per unit electricity is 0.50
+    float amt=unit*0.50;
+    printf("Total amount is %.2f",amt);
+    return 0;
+}

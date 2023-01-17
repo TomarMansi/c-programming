@@ -1,0 +1,15 @@
+// C program to calculate factorial of a numbe
+#include<stdio.h>
+int main()
+{
+    int n;
+    printf("Enter any number:\n");
+    scanf("%d",&n);
+    int fact=1;
+    for (int i = n; i >= 1; i--)
+    {
+        fact=fact*i;
+    }
+    printf("Factorial of %d is %d",n, fact);
+    return 0;
+}
